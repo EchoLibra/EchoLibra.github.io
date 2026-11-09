@@ -2,7 +2,7 @@
 (() => {
   if (new URLSearchParams(location.search).get('edit') !== '1') return;
   document.documentElement.classList.add('editing');
-  const selectors = 'main p, main h1, main h2, main h3, main figcaption, main .date, main .actions a, main .status, main .tags span, main .result-pair strong, main .result-pair span';
+  const selectors = 'main p, main h1, main h2, main h3, main figcaption, main .date, main .actions a, main .status, main .tags span, main .result-pair strong, main .result-pair span, main .venue, main .paper-links span';
   document.querySelectorAll(selectors).forEach(element => {
     element.setAttribute('contenteditable', 'plaintext-only');
     element.dataset.localEditable = 'true';
